@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const User = require("./models/user.model");
 const Note = require("./models/note.model");
 
@@ -8,7 +9,7 @@ require("dotenv").config();
 mongoose.connect(process.env.MONGO_URL)
   .then(console.log(`MongoDB Connected`))
 
-const cors = require("cors");
+
 const app = express();
 
 const jwt = require("jsonwebtoken");
